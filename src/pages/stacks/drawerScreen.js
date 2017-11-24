@@ -7,7 +7,7 @@ import Screen1 from '../searchResualt';
 import Screen2 from '../screen2'; 
 
 const DrawerScreen = DrawerNavigator({
-    Home: {screen: Screen1},
+    Home1: {screen: Screen1}, 
     Main: {screen: Screen2}
 }, {
     headerMode: 'none',
