@@ -11,7 +11,7 @@ const DrawerScreen = DrawerNavigator({
     Main: {screen: Screen2}
 }, {
     headerMode: 'none',
-    drawerPosition:'Left',
+    drawerPosition:'left',
 })
 
 export default DrawerScreen;
