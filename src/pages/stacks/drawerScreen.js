@@ -7,11 +7,23 @@ import Screen1 from '../searchResualt';
 import Screen2 from '../screen2'; 
 
 const DrawerScreen = DrawerNavigator({
-    Home1: {screen: Screen1}, 
-    Main: {screen: Screen2}
+    'Home': {screen: Screen1}, 
+    'History': {screen: Screen2}, 
+    'Setting': {screen: Screen2},
+    'About us': {screen: Screen2},
+    'Contact Us': {screen: Screen2},
 }, {
     headerMode: 'none',
-    drawerPosition:'left',
-})
+    drawerPosition:'left', 
+
+    contentOptions: {
+        activeTintColor: 'red',
+        activeBackgroundColor:'#000'
+    },
+    
+
+});
+
+ 
 
 export default DrawerScreen;
