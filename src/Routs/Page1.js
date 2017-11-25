@@ -6,8 +6,10 @@ import {
 } from 'react-native';
 
  
-export default () => (
-  
+export default class Routs extends Component {
+    render ()
+    {
+        return(
      <View>
          <Text>  welcome to page 1 </Text>
          <Text>  welcome to page 1 </Text>
@@ -15,4 +17,6 @@ export default () => (
          <Text>  welcome to page 1 </Text>
          <Text>  welcome to page 1 </Text>
      </View>
-                );
+        );
+    }
+}
