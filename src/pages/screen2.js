@@ -6,10 +6,11 @@ import DeviceInfo from 'react-native-device-info';
 class Screen2 extends Component {
  
     render() {
-        
+        var x = DeviceInfo.getUniqueID();
        
         return ( 
             <View>
+                
              <Text>
             Device Unique ID UUID:{ DeviceInfo.getUniqueID() }
            
@@ -25,6 +26,7 @@ class Screen2 extends Component {
                </Text>
                <Text>
                Device Local ID: Bebele toro sag bekhore :)
+               {x}
               
                </Text>
              </View>
