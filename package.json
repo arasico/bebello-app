@@ -13,6 +13,8 @@
 		"react-native-elements": "^0.18.2",
 		"react-native-linear-gradient": "^2.3.0",
 		"react-native-router-flux": "^4.0.0-beta.24",
+		// npm install react-native-uuid-generator --save    for install UUID in rewact native
+		"react-native-uuid-generator": "^3.0.2",
 		"react-navigation": "^1.0.0-beta.19",
 		"react-navigator": "0.0.0-0"
 	},
