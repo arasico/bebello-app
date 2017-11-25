@@ -24,7 +24,7 @@ const DrawerNavigation = StackNavigator({
         headerTitleStyle: { textAlign: 'center', alignSelf: 'center', fontWeight: 'normal', fontSize: 20, color: '#fcfcfc' },
         title:'Home',
         headerCenter:<View><Text>yase </Text> </View>,
-        headerLeft: <View>
+        headerLeft: <View >
                
             <Icon  name="menu" size={35} color="#fff"
                 onPress={() => {
