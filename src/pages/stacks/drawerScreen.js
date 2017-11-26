@@ -4,11 +4,11 @@ import React from 'react';
 import {Icon} from 'react-native-elements';
 
 import Screen1 from '../searchResualt';
-import Screen2 from '../screen2'; 
+import Screen2 from '../screen2';
+import Screen3 from '../login'; 
 
 const DrawerScreen = DrawerNavigator({
-    'Home00': {screen: Screen1}, 
-    'History': {screen: Screen2}, 
+    'Home': {screen: Screen1}, 
     'Setting': {screen: Screen2},
     'About us': {screen: Screen2},
     'Contact Us': {screen: Screen2},
@@ -23,7 +23,6 @@ const DrawerScreen = DrawerNavigator({
     
 
 });
-
  
 
 export default DrawerScreen;

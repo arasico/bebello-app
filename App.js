@@ -7,15 +7,21 @@ import {
 
 //start spalsh page for index 
 import SplashStart from './splashStart'; 
+import Main from './src/pages/main';
+//import MainMyApp from './src/MyApp/main';
 
+ 
 
  
 
 class App extends Component{
-	render(){
+	render(){ 
 		return(
-		<SplashStart/>
+ 		<SplashStart/>
+
 		)
+  
+	
 	}
 }
 
