@@ -12,6 +12,9 @@ const DrawerScreen = DrawerNavigator({
     'Setting': {screen: Screen2},
     'About us': {screen: Screen2},
     'Contact Us': {screen: Screen2},
+    'suport': {screen: Screen2},
+    'profile': {screen: Screen2},
+    'log ot': {screen: Screen2},
 }, {
     headerMode: 'none',
     drawerPosition:'left', 
