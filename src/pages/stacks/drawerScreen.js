@@ -18,7 +18,7 @@ const DrawerScreen = DrawerNavigator({
     drawerPosition:'left', 
 
     contentOptions: {
-        activeTintColor: 'red',
+        activeTintColor: '#fcfcfc',
         activeBackgroundColor:'#000'
     },
     
