@@ -13,7 +13,7 @@ import MainPage from './src/pages/main';
 
 class SplashStart extends Component{
 	render(){
-		var x ="loginout";
+		var x ="login";
 		if (x=="login"){
 			return(
 				//TODO: change duration to 3K ms
