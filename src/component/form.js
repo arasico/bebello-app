@@ -14,8 +14,7 @@ import {Actions} from 'react-native-router-flux';
 export default class Logo extends Component {
  
 
-    render() {
-        let  x="";
+    render() { 
 
       return (
           <View style={styles.continer} >
@@ -31,7 +30,7 @@ export default class Logo extends Component {
                secureTextEntry
                
                /> 
-                
+
                <TouchableOpacity style={styles.Button} onPress={()=> Actions.mainKey({})} >
                    <Text style={styles.buttonText} >
                    {this.props.type} ;
