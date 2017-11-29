@@ -15,6 +15,8 @@ export default class Logo extends Component {
  
 
     render() {
+        let  x="";
+
       return (
           <View style={styles.continer} >
               <TextInput  style={styles.inputBox}
@@ -28,11 +30,11 @@ export default class Logo extends Component {
                placeholder="Password" 
                secureTextEntry
                
-               />
-
+               /> 
+                
                <TouchableOpacity style={styles.Button} onPress={()=> Actions.mainKey({})} >
                    <Text style={styles.buttonText} >
-                       {this.props.type}
+                   {this.props.type} ;
                    </Text>
                </TouchableOpacity>
          </View>
