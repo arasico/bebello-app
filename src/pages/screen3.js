@@ -18,7 +18,7 @@ export default class Screen3 extends Component {
         name: 'aras'};
         
 
-        fetch('http://api.bebello.ir/api/v1/auth/Register', {
+        fetch('http://api.bebello.ir/api/v1/auth/test', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
