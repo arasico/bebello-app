@@ -1,53 +1,46 @@
 import React , {Component} from 'react';
-import { View , Text , TouchableOpacity , StyleSheet , Alert}  from 'react-native';
+import { View , Text , TouchableOpacity , StyleSheet , Alert , TextInput}  from 'react-native';
  
 
 
 
 
 export default class Screen3 extends Component {
-    state = {
-        responseBody:[]
-};
 
 
     _onPressButton() {
+ 
 
-        let customBody = {email: 'aras.armani2014@gmail.com',  
-        password: '01110111',
-        name: 'aras'};
-        
-
-        fetch('http://api.bebello.ir/api/v1/auth/test', {
+        fetch('http://api.bebello.ir/api/v1/auth/register', {
             method: 'POST',
             headers: {
               'Accept': 'application/json',
-              'Content-Type': 'application/x-www-form-urlencoded',
+              'Content-Type': 'application/json',
               'agent': 'android',
-              'uuid': 'bebello-araso-bekhore',
+              'uuid': 'bebello-ar',
             },
             body: JSON.stringify({
-            email: 'aras.armani2014@gmail.com',  
+            email: 'aras.armasdasdani2014@gmail.com',  
             password: '01110111',
             name: 'aras'})
           }).then(response => {
-              
+
             if (response.status === 200) {
             
                 return response.json();
 
             } else { 
-                throw new Error('Something went wrong on api server!');
+                return response.json();
             }
           })
           .then((responseData) => {
             Alert.alert(                              
-                "Blood pressure data",
-                "Blood pressure data - " + JSON.stringify(responseData)
+                 JSON.stringify(responseData.token[0].token)
             )
         })
 
         
+
 
           .then(response => {
             console.debug(response);
@@ -74,6 +67,7 @@ render(){
                         <Text>Send Post</Text>
                     </TouchableOpacity>
 <Text>-----------------------</Text>
+<TextInput placeholder="email" />
  
                 </View>
 
