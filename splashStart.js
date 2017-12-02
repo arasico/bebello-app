@@ -13,13 +13,22 @@ import MainPage from './src/pages/main';
  
 
 class SplashStart extends Component{
- 
+	state = {
+		curentSTS: null,
+	}
+	componentWillMount(){
+		// let user = await AsyncStorage.getItem('user');
+		// this.setState({curTime : await AsyncStorage.getItem('user')});
+		this.showData();
+	}
+
+
 	showData = async () =>{
 		
 			try{
 				const user = await AsyncStorage.getItem('user');
-				this.setState({curTime: user})
-				alert(user);
+				this.setState({curentSTS: user})
+				//alert(user);
 		
 			}
 			catch(error)   {
@@ -29,12 +38,13 @@ class SplashStart extends Component{
 		}
 
 
-		
+
+
  
 
 	render(){
-	     var x = "login";
-		if (x =="login"){
+		
+		if (this.state.curentSTS =="login"){
 			return(
 				//TODO: change duration to 3K ms
 				<SplashScreen >

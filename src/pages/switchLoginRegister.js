@@ -6,6 +6,7 @@ import Login1 from './login';
 import Signup1 from './signup';
 import MainT from './main';
 import SearchResualt from './searchResualt';
+import Splash from '../../splashStart';
 import Test1 from './test';
  
 
@@ -21,6 +22,7 @@ export default class Routs extends Component {
             <Scene key="signupKey"  component={Signup1} title="Signup1" hideNavBar /> 
             <Scene key="mainKey"  component={MainT}   title="Main"   /> 
             <Scene key="searchResualtKey"  component={SearchResualt} title="Search resualt"  hideNavBar /> 
+            <Scene key="splashKey"  component={Splash} title="Splash"  hideNavBar /> 
             <Scene key="test"  component={Test1} title="test" hideNavBar /> 
           </Scene>
         </Router>

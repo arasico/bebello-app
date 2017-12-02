@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import {Actions} from 'react-native-router-flux';
+import Splash from '../../splashStart';
 
 export default class Logo extends Component {
  
@@ -17,7 +18,8 @@ export default class Logo extends Component {
     render() { 
 
       return (
-          <View style={styles.continer} >
+        
+         <View style={styles.continer} >
               <TextInput  style={styles.inputBox}
                underlineColorAndroid='rgba(0,0,0,0)'
                placeholder="E-mail" 
@@ -37,11 +39,16 @@ export default class Logo extends Component {
                    </Text>
                </TouchableOpacity>
          </View>
+         
+
+
       );
     } 
 
     goMainpage (){
         AsyncStorage.setItem('user', 'login');
+        Actions.splashKey({});
+        
     }
 }
 
