@@ -2,60 +2,28 @@ import React, { Component } from 'react';
 import {
 	StyleSheet,
 	Text,
-	View,
-	AsyncStorage
+	View
 } from 'react-native';
 import SplashScreen from './src/component/splashScreen';
 import SwitchLoginRegister from './src/pages/switchLoginRegister';
-import MainPage from './src/pages/main';
+import MainPage from './main';
 
 
  
 
 class SplashStart extends Component{
- 
-	showData = async () =>{
-		
-			try{
-				const user = await AsyncStorage.getItem('user');
-				this.setState({curTime: user})
-				alert(user);
-		
-			}
-			catch(error)   {
-				alert(error);
-		
-			}
-		}
-
-
-		
- 
-
 	render(){
-	     var x = "login";
-		if (x =="login"){
+	 
+		 
 			return(
 				//TODO: change duration to 3K ms
-				<SplashScreen >
+			 
 				<MainPage>
    
 			   </MainPage>
 			   
-			   </SplashScreen>
-			)
-		}else{
-		return(
-	
-
-<SplashScreen >
-<SwitchLoginRegister>
-
-</SwitchLoginRegister>
-
-</SplashScreen>
-		)
-	}
+			 
+			) 
 	}
 }
 

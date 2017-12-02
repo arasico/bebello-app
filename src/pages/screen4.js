@@ -6,13 +6,20 @@ import { View , Text , TouchableOpacity ,     StyleSheet , Alert , TextInput , A
 
 
 export default class Screen4 extends Component {
-
+  
  
  exit_function = () => {
+
+    
+     try{
     Alert.alert(
      'Your Text',
      this.state.my_input_text
    );
+}
+catch(error){
+    alert(error);
+}
  }
  
 saveData = () => {
@@ -21,12 +28,27 @@ saveData = () => {
     AsyncStorage.setItem('user', this.state.my_input_text);
     alert('save.');
 }
+state = {
+    curTime: null,
+}
+componentWillMount(){
+    // let user = await AsyncStorage.getItem('user');
+    // this.setState({curTime : await AsyncStorage.getItem('user')});
+    this.showData();
+}
+
+ 
 
 render(){
- 
+    
 
     return(
         <View>
+
+          <Text>
+              010{this.state.curTime}
+          </Text>
+
                <TouchableOpacity   onPress={this.saveData}  >
                    <Text>Save Data</Text>
                    
@@ -46,11 +68,9 @@ render(){
                    <Text>show meessage</Text>
                    
                 </TouchableOpacity>
-               
 
               
-
-
+            
 
  
 
@@ -65,7 +85,8 @@ render(){
 showData = async () =>{
 
     try{
-        let user = await AsyncStorage.getItem('user');
+        const user = await AsyncStorage.getItem('user');
+        this.setState({curTime: user})
         alert(user);
 
     }

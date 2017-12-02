@@ -5,11 +5,11 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  AsyncStorage
 } from 'react-native';
 
 import {Actions} from 'react-native-router-flux';
-
 
 export default class Logo extends Component {
  
@@ -31,15 +31,21 @@ export default class Logo extends Component {
                
                /> 
 
-               <TouchableOpacity style={styles.Button} onPress={()=> Actions.mainKey({})} >
+               <TouchableOpacity style={styles.Button} onPress={this.goMainpage} >
                    <Text style={styles.buttonText} >
-                   {this.props.type} ;
+                   {this.props.type} 
                    </Text>
                </TouchableOpacity>
          </View>
       );
+    } 
+
+    goMainpage (){
+        AsyncStorage.setItem('user', 'login');
     }
 }
+
+ 
 
 const styles = StyleSheet.create({
     

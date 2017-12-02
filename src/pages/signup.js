@@ -9,18 +9,21 @@ import {
 } from 'react-native'; 
 import {
     StackNavigator,
+   
   } from 'react-navigation';
+  import {Navigation} from 'react-native-navigation';
+ 
 import {Actions } from 'react-native-router-flux';
 import Logo from '../component/logo';
 import Form from '../component/formRegister';
-//import Login from './login';
+import main from './main';
 
 
 
  
 export default class Signup extends Component {
     
-        
+ 
         render() {
             
           return (
@@ -32,7 +35,6 @@ export default class Signup extends Component {
                        <View  style={styles.signupTextCont} >
                            <Text style={styles.signupText} >Already have account? </Text>
                            <Text style={styles.signUp} onPress={() => Actions.loginKey({}) }>Sign In</Text>
-                      
                        </View>
                 </View>
           );
@@ -44,7 +46,7 @@ export default class Signup extends Component {
 
  
  
-
+    // <Text style={styles.signUp} onPress={() => Actions.loginKey({}) }>Sign In</Text>
 
 
 
