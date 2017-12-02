@@ -1,25 +1,13 @@
 import React , {Component} from 'react';
-import { View , Text , TouchableOpacity ,
-     StyleSheet , Alert , TextInput , AsyncStorage,    }  from 'react-native';
+import { View , Text , TouchableOpacity ,     StyleSheet , Alert , TextInput , AsyncStorage,    }  from 'react-native';
  
 
 
 
 
-export default class Screen3 extends Component {
+export default class Screen4 extends Component {
 
-
-    // componentDidMount () { 
-    //     this._updateList(); 
-    //   } 
-    
-    //   async _addTask () { 
-    //     const listOfTasks = [...this.state.listOfTasks, this.state.text]; 
-    
-    //     await AsyncStorage.setItem('listOfTasks',  JSON.stringify(listOfTasks)); 
-    
-    //     this._updateList(); 
-    //   } 
+ 
 
 
 render(){
@@ -27,10 +15,40 @@ render(){
 
     return(
         <View>
-               
+               <TouchableOpacity   onPress={this.saveData}  >
+                   <Text>Save Data</Text>
+                   
+                </TouchableOpacity>
+
+
+                <TouchableOpacity   onPress={this.showData}  >
+                   <Text>show Data</Text>
+                   
+                </TouchableOpacity>
         </View>
 
     );
+}
+
+saveData(){
+    // alert('Test is ok');
+
+    let user ='aras';
+    AsyncStorage.setItem('user', user);
+    alert('save data');
+}
+
+showData = async () =>{
+
+    try{
+        let user = await AsyncStorage.getItem('user');
+        alert(user);
+
+    }
+    catch(error)   {
+        alert(error);
+
+    }
 }
 
 }
