@@ -8,7 +8,19 @@ import { View , Text , TouchableOpacity ,     StyleSheet , Alert , TextInput , A
 export default class Screen4 extends Component {
 
  
-
+ exit_function = () => {
+    Alert.alert(
+     'Your Text',
+     this.state.my_input_text
+   );
+ }
+ 
+saveData = () => {
+    // alert('Test is ok'); 
+    
+    AsyncStorage.setItem('user', this.state.my_input_text);
+    alert('save.');
+}
 
 render(){
  
@@ -25,18 +37,30 @@ render(){
                    <Text>show Data</Text>
                    
                 </TouchableOpacity>
+
+                <TextInput 
+                placeholder="Insert valuy" 
+                onChangeText={(text) => this.setState({my_input_text:text})}
+                />
+                <TouchableOpacity  onPress={this.exit_function}  >
+                   <Text>show meessage</Text>
+                   
+                </TouchableOpacity>
+               
+
+              
+
+
+
+ 
+
         </View>
 
     );
 }
 
-saveData(){
-    // alert('Test is ok');
 
-    let user ='aras';
-    AsyncStorage.setItem('user', user);
-    alert('save data');
-}
+ 
 
 showData = async () =>{
 
