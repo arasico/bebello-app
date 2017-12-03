@@ -27,11 +27,11 @@ export default class Screen2 extends Component {
             <View>
                 
              <Text>
-            Device Unique ID UUID:{ DeviceInfo.getUniqueID() }
+            Device UUID:{ DeviceInfo.getUniqueID() }
            
             </Text>
                <Text>
-               Device User Agen :{ DeviceInfo.getUserAgent() }
+               Device User Agen :{ DeviceInfo.getSystemName() }
               
                </Text>
                
