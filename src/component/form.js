@@ -13,16 +13,27 @@ import {Actions} from 'react-native-router-flux';
 import Splash from '../../splashStart';
 
 export default class Logo extends Component {
- 
+    constructor(props) {
+        super(props);
+        this.state = { 
+          txtEmail: 'null',
+          txtPassword: 'null',
+          validated : false,
+          messageText :' 0',
+
+        };
+      }
 
     render() { 
 
       return (
         
          <View style={styles.continer} >
+         <Text> {this.state.messageText}</Text>
               <TextInput  style={styles.inputBox}
                underlineColorAndroid='rgba(0,0,0,0)'
                placeholder="E-mail" 
+               onChangeText={(text) => this.setState({txtEmail:text})} 
                
                />
 
@@ -33,7 +44,7 @@ export default class Logo extends Component {
                
                /> 
 
-               <TouchableOpacity style={styles.Button} onPress={this.goMainpage} >
+               <TouchableOpacity style={styles.Button} onPress={this.submitLogin} >
                    <Text style={styles.buttonText} >
                    {this.props.type} 
                    </Text>
@@ -45,9 +56,26 @@ export default class Logo extends Component {
       );
     } 
 
-    goMainpage (){
-        AsyncStorage.setItem('user', 'login');
-        Actions.splashKey({});
+    submitLogin = () =>{
+     
+
+        if(this.state.txtEmail=='null')
+        {
+            this.setState({messageText: 'pleas isnert true email '});
+            this.setState({validated: false});
+        }
+        else
+        {
+            this.setState({validated: true});
+        }
+        if(this.state.validated == true)
+        {
+            alert('login sucses');
+        }
+     
+
+        // AsyncStorage.setItem('user', 'login');
+        // Actions.splashKey({});
         
     }
 }
