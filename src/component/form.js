@@ -70,12 +70,9 @@ export default class Logo extends Component {
         }
         if(this.state.validated == true)
         {
-            alert('login sucses');
+            Alert.alert('login sucses');
         }
-         if(this.state.validated != true)
-        {
-            alert('login not suchses');
-        }
+       
      
 
         // AsyncStorage.setItem('user', 'login');
