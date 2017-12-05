@@ -61,7 +61,7 @@ export default class Logo extends Component {
 
         if(this.state.txtEmail=='null')
         {
-            this.setState({messageText: 'pleas isnert true email '});
+            this.setState({messageText: 'pleas isnert valid email '});
             this.setState({validated: false});
         }
         else
