@@ -70,7 +70,7 @@ export default class Logo extends Component {
         }
         if(this.state.validated == true)
         {
-            Alert.alert('login sucses');
+            alert('login sucses');
         }
        
      
