@@ -59,24 +59,24 @@ export default class Logo extends Component {
     submitLogin = () =>{
      
 
-        if(this.state.txtEmail=='null')
-        {
-            this.setState({messageText: 'pleas isnert valid email '});
-            this.setState({validated: false});
-        }
-        else
-        {
-            this.setState({validated: true});
-        }
-        if(this.state.validated == true)
-        {
-            alert('login sucses');
-        }
+        // if(this.state.txtEmail=='null')
+        // {
+        //     this.setState({messageText: 'pleas isnert valid email '});
+        //     this.setState({validated: false});
+        // }
+        // else
+        // {
+        //     this.setState({validated: true});
+        // }
+        // if(this.state.validated == true)
+        // {
+        //     alert('login sucses');
+        // }
        
      
 
-        // AsyncStorage.setItem('user', 'login');
-        // Actions.splashKey({});
+        AsyncStorage.setItem('user', 'login');
+        Actions.splashKey({});
         
     }
 }
